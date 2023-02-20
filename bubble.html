@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: rgb(183, 156, 101);
+        /* background-repeat: no-repeat; */
+        /* background-attachment: fixed; */
+    }
+    .main {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        position: absolute;
+        top: -70px;
+    
+    }
+    .main img {
+        width: 50px;
+        /* border-radius: 50%; */
+        animation: bubbles 5s linear infinite;
+        /* animation-name: bubbles;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; */
+    }
+
+    @keyframes bubbles {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        25% {
+
+            opacity: 1;
+        }
+        50% {
+
+            opacity: 1;
+        }
+        75% {
+
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(80vh);
+            opacity: 0;
+        }
+    }
+
+    
+    .main img:nth-child(1) {
+        animation-delay: 5s;
+    }
+    .main img:nth-child(2) {
+        animation-delay: 3s;
+    }
+    .main img:nth-child(3) {
+        animation-delay: 4.5s;
+    }
+    .main img:nth-child(4) {
+        animation-delay: 3.5s;
+    }
+    .main img:nth-child(5) {
+        animation-delay: 5s;
+    }
+    .main img:nth-child(6) {
+        animation-delay: 3.2s;
+    }
+    .main img:nth-child(7) {
+        animation-delay: 7s;
+    }
+    .main img:nth-child(8) {
+        animation-delay: 9s;
+    }
+    .main img:nth-child(9) {
+        animation-delay: 2s;
+    }
+    .main img:nth-child(10) {
+        animation-delay: 1s;
+    }
+
+    /* .main img:nth-child(odd){
+        animation-delay: 1s;
+
+    }
+
+    .main img:nth-child(even){
+        animation-delay: 2s;
+
+    } */
+
+</style>
+<body>
+
+    <section class="main">
+        <img class="img1" src="bubble2.png" alt="">
+        <img class="img2" src="bubble2.png" alt="">
+        <img class="img3" src="bubble2.png" alt="">
+        <img class="img4" src="bubble2.png" alt="">
+        <img class="img5" src="bubble2.png" alt="">
+        <img class="img6" src="bubble2.png" alt="">
+        <img class="img7" src="bubble2.png" alt="">
+        <img class="img8" src="bubble2.png" alt="">
+        <img class="img9" src="bubble2.png" alt="">
+        <img class="img10" src="bubble2.png" alt="">
+    </section>
+</body>
+</html>

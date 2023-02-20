@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 80vh;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="300" height="300" id="promise">
+        <circle cx="150" cy="150" r="120" stroke="black" stroke-width="4" fill="aqua" />
+        <text fill="black" font-size="45" x="60" y="155">JavaScript</text>
+    </svg>
+
+    <!-- <script>
+        var KEYFRAMES = {
+            r: [
+                { transform: 'rotate(360deg)' },
+            ],
+        };
+
+        var box2 = document.querySelector('#promise');
+        var animA = box2.animate(KEYFRAMES);
+        animA.finished.then(function () {
+            var animB = box2.animate(KEYFRAMES);
+            return animB.finished;
+        }).then(function () {
+            var animC = box2.animate(KEYFRAMES.r, 1000);
+            return animC.finished;
+        })
+
+    </script> -->
+</body>
+
+</html>

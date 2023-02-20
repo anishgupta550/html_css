@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- style -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .title{
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        
+
+        .container {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            /* color: white; */
+            font-size: 65px;
+            padding: 0 282px;
+            align-items: center;
+            position: absolute;
+            top: 20%;
+        }
+
+        .box {
+            width: 25%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .days {
+            font-size: 65px;
+        }
+
+        .hours {
+            font-size: 65px;
+        }
+
+        .minutes {
+            font-size: 65px;
+        }
+
+        .seconds {
+            font-size: 65px;
+        }
+
+        .text {
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe
+            src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="100%" height="100%" style="position:absolute"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+    <div class="container">
+        <div class="box">
+            <div id="days"></div>
+            <div class="text">DAYS</div>
+        </div>
+        <div class="box">
+            <div id="hours"></div>
+            <div class="text">HOURS</div>
+        </div>
+        <div class="box">
+            <div id="minutes"></div>
+            <div class="text">MINUTES</div>
+        </div>
+        <div class="box">
+            <div id="seconds"></div>
+            <div class="text">SECONDS</div>
+        </div>
+    </div>
+    <!-- <div class="title">
+        <h2>Party Will Start Soon.</h2>
+    </div> -->
+
+
+    <!--javascript  -->
+
+    <script>
+        const days1 = document.getElementById('days');
+        const hours1 = document.getElementById('hours');
+        const minutes1 = document.getElementById('minutes');
+        const seconds1 = document.getElementById('seconds');
+
+        const next = '9 september 2022';
+
+        function countDown() {
+            const nextDate = new Date(next);
+            const currentDate = new Date();
+
+            const totalseconds = (nextDate - currentDate) / 1000;
+            const day = Math.floor(totalseconds / 3600 / 24);
+            const hour = Math.floor((totalseconds / 3600) % 24);
+            const minute = Math.floor((totalseconds / 60) % 60);
+            const second = Math.floor(totalseconds % 60);
+
+            days1.innerHTML = timeFormat(day);
+            hours1.innerHTML = timeFormat(hour);
+            minutes1.innerHTML = timeFormat(minute);
+            seconds1.innerHTML = timeFormat(second);
+        
+        }
+
+        function timeFormat(k) {
+            if (k < 10) {
+                return "0" + k;
+            }
+            else {
+                return k;
+            }
+        }
+
+        countDown();
+
+        setInterval(countDown, 1000);
+    </script>
+</body>
+
+</html>

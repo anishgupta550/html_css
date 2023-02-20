@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            background-color: yellow;
+            
+           
+        }
+        .main{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            position: absolute;
+            top: -80px;
+           
+        }
+        .main img{
+            width: 5%;
+            animation: bubbles 3s linear infinite;
+
+          
+        }
+        @keyframes bubbles{
+            0%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            25%{
+                opacity: 1;
+               
+            }
+            75%{
+                opacity: 1;
+                
+            }
+            100%{
+                opacity: 0;
+                transform: translatey(90vh);
+                
+            }
+        }
+        .main img:nth-child(1){
+            animation-delay: 1s;
+        }
+        .main img:nth-child(2){
+            animation-delay: 0.5s;
+        }
+        .main img:nth-child(3){
+            animation-delay: 1s;
+        }
+        .main img:nth-child(4){
+            animation-delay: 0.5s;
+        }
+        .main img:nth-child(5){
+            animation-delay: 1s;
+        }
+        .main img:nth-child(6){
+            animation-delay: 0.5s;
+        }
+        .main img:nth-child(7){
+            animation-delay: 1s;
+        }
+        .main img:nth-child(8){
+            animation-delay: 0.5s;
+        }
+        .main img:nth-child(9){
+            animation-delay: 1s;
+        }
+        .main img:nth-child(10){
+            animation-delay: 0.5 s;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+        <img class="img" src="bubble2.png" alt="">
+    </div>
+    
+</body>
+</html>

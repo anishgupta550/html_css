@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 35%;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .group {
+            width: 62%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        button {
+            border: none;
+            padding: 24px;
+            margin-left: 18px;
+            filter: drop-shadow(3px 2px 3px grey);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: greenyellow;
+            transition: 0.4s;
+            filter: none;
+        }
+        #off:hover{
+            background-color: red;
+            transition: 0.4s;
+            filter: none;
+
+        }
+
+        img {
+            filter: drop-shadow(12px 7px 1px rgb(188, 188, 188));
+        }
+
+
+
+        .normal {
+            animation: ani 3s infinite linear;
+        }
+
+        @keyframes ani {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fast {
+            animation: fast 0.9s infinite linear;
+        }
+
+        @keyframes fast {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .extra {
+            animation: fast 0.025s infinite linear;
+        }
+
+        @keyframes extra {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="PngItem_3583737.png" alt="" width="500px" id="img">
+        <br>
+        <div class="group">
+            <button onclick="on()">1</button>
+            <button onclick="second()">2</button>
+            <button onclick="third()">3</button>
+            <button onclick="off()" id="off">off</button>
+        </div>
+    </div>
+
+    <script>
+        let img = document.querySelector("#img");
+
+        function on() {
+            img.classList.add("normal");
+             
+        }
+        function second() {
+            img.classList.add("fast")
+        }
+        function third() {
+            img.classList.add("extra")
+        }
+        function off() {
+            img.classList.remove("normal", "fast", "extra");
+        }
+
+
+    </script>
+
+</body>
+
+</html>

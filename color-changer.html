@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 98vh;
+            align-items: center;
+        } 
+    </style>
+</head>
+<body>
+    <!-- color picker -->
+<div class="container">
+    <h1>This is  <span class="currentcolor">(255, 255, 255)</span></h1>
+</div>
+<button class="btn">click here</button>
+<script>
+    let currentcolor = document.querySelector(".currentcolor");
+    let container = document.querySelector(".container");
+    let button = document.querySelector(".btn");
+    let body = document.body;
+
+    button.addEventListener("click", function(){
+        let input = changecolor();
+        body.style.background = input;
+        currentcolor.innerHTML = input;
+    });
+    function changecolor(){
+        let red = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+        input = `rgb(${red}, ${green}, ${blue})`;
+        return input;
+    }
+</script>
+
+</body>
+</html>

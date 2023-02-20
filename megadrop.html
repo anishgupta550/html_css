@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: black;
+        }
+        .navbar a{
+            float: left;
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            padding: 22px;
+        }
+        .dropdown{
+            float: left;
+        }
+        .dropbtn{
+            border: none;
+            outline: none;
+            color: white;
+            padding: 23px;
+            background-color: black;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn{
+            background-color: red;
+        }
+        .content{
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+        .dropdown:hover .content{
+            display: block;
+        }
+        .menu{
+            background: red;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+        }
+        .column{
+            background-color: rgb(236, 231, 231);
+            padding: 10px;
+            width: 100%;
+        }
+        .column a{
+            display: block;
+            float: none;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .column a:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="">home</a>
+        <a href="">services</a>
+        <div class="dropdown">
+            <button class="dropbtn" >Dropdown <i class="fas fa-caret-down"></i></button>
+            <div class="content">
+                <div class="menu">
+                <h2>Main Menu</h2>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <a href="">link 1</a>
+                        <a href="">link 2</a>
+                        <a href="">link 3</a>
+                        <a href="">link 4</a>
+                        <a href="">link 5</a>
+                    </div>
+                    <div class="column">
+                        <a href="">link 1</a>
+                        <a href="">link 2</a>
+                        <a href="">link 3</a>
+                        <a href="">link 4</a>
+                        <a href="">link 5</a>
+                    </div>
+                    <div class="column">
+                        <a href="">link 1</a>
+                        <a href="">link 2</a>
+                        <a href="">link 3</a>
+                        <a href="">link 4</a>
+                        <a href="">link 5</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

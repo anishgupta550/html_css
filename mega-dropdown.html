@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega drop down</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .navbar {
+            background-color: black;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            padding-left: 10px;
+            position: relative;
+
+        }
+
+        .nav-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .drop-content h2 {
+            background-color: white;
+            text-align: center;
+            color: black;
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .drop-content {
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            left: 0; 
+            display: none;
+        }
+
+        .drop-btn:hover .drop-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul class="nav-content">
+            <li>Home</li>
+            <li>About</li>
+            <li class="drop-btn">Dropdown
+
+                <div class="drop-content">
+                    <h2>Main Heading</h2>
+
+
+                    <div class="row">
+
+                        <div class="column">
+                            <ul>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </li>
+
+
+        </ul>
+
+  
+    </div>
+</body>
+
+</html>

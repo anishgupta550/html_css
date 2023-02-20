@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: yellow;
+        }
+        .container {
+            width: 100%;
+        }
+        form{
+            text-align: center;
+            margin-top: 12%;
+        }
+        textarea{
+            border: 1px solid black;
+        }
+        .buttons{
+            margin-top: 10px;
+
+        }
+        #btn1{
+            border: none;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            width: 100px;
+        }
+        #btn1:hover{
+            background-color: rgb(48, 204, 0);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        #btn2{
+            border: none;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            width: 100px;
+        }
+        #btn2:hover{
+            background-color: rgb(48, 204, 0);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        #btn3{
+            border: none;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            width: 100px;
+        }
+        #btn3:hover{
+            background-color: rgb(48, 204, 0);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        #btn4{
+            border: none;
+            padding: 15px;
+            background-color: red;
+            color: white;
+            width: 72px;
+            cursor: pointer;
+        }
+        #btn4:hover{
+            background-color: rgb(211, 0, 0);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+
+            <textarea name="area" id="main" cols="50" rows="10" placeholder="Type Here..."></textarea>
+
+            <div class="buttons">
+                <button id="btn1" type="button">Uppercase</button>
+                <button id="btn2" type="button">Lowercase</button>
+                <button id="btn3" type="button">Copy</button>
+                <button type="reset" id="btn4">Clear</button>
+
+                <!-- <div id="text"></div> -->
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("btn1").onclick = function () {
+            let UpperString = document
+                .getElementById("main")
+                .value.toUpperCase();
+            document.getElementById("main").value = UpperString;
+        };
+        document.getElementById("btn2").onclick = function () {
+            let UpperString = document
+                .getElementById("main")
+                .value.toLowerCase();
+            document.getElementById("main").value = UpperString;
+
+        };
+        document.getElementById("btn3").onclick = function () {
+            document.getElementById("main").select();
+            document.execCommand("copy");
+        };
+    </script>
+</body>
+
+</html>

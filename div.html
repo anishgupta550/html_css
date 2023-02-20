@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div_one {
+  width: 50px;
+  height: 50px;
+  border: 10px solid red;
+}
+
+#div_two {
+  width: 50px;
+  height: 50px;
+  border: 10px solid blue;
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes down {
+  100% {
+    transform: translateY(300px);
+  }
+}
+    </style>
+</head>
+<body>
+    <div id="div_one"></div>
+<div id="div_two"></div>
+    
+
+    <script>
+    let move_boxes = () => {
+    return new Promise( (resolve, reject) => {
+        resolve ('boxes moved!')
+    })
+};
+let move_box_one = () => {
+    return new Promise( (resolve, reject) => {
+        resolve (document.getElementById('div_two').style.animation = 'move 3s forwards')
+        console.log('box one moved!')   
+    })
+
+}
+let move_box_two = () => {
+    return new Promise( (resolve, reject) => {
+        resolve (document.getElementById('div_one').style.animation = 'move 3s forwards')
+        console.log('box two moved!')       
+    })
+}
+
+move_boxes().then(() => {
+    return move_box_one();
+}).then(() => {
+    return move_box_two();
+});
+    </script>
+</body>
+</html>
