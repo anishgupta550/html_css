@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="data" onkeyup="hello()" >
+
+    <ul id="ul">
+        <li><a href="">anish</a></li>
+        <li><a href="">pushkar</a></li>
+        <li><a href="">abhishek</a></li>
+        <li><a href="">ashpreet</a></li>
+    </ul>
+
+    <script>
+
+        function hello() {
+
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("data");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("ul");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+            if(input.value == ""){
+                ul.style.display= "none";
+            }else{
+                ul.style.display= "block";
+            }
+        }
+     
+
+    </script>
+</body>
+
+</html>
